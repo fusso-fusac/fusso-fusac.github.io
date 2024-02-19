@@ -1,1 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fu-SAC</title>
+    <style>
+        body {
+            text-align: center; /* 使所有内容居中 */
+            margin: 0;
+            background-color: black;
+            padding: 0;
+      
+        }
+        
+        body p {
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 25px;
+            font-weight: 300;
+            letter-spacing: 3px ;
+            line-height: normal;  
+        }
+
+        .logo {
+            width: 200px; /* Logo大小 */
+            padding: 10px;
+            transition: transform 0.8s ease; /* 平滑的放大效果 */
+        }
+        .logo:hover {
+            transform: scale(1.2); /* 鼠标悬停时放大10% */
+        }
+        .image-container {
+            width: 100%; /* 图片容器宽度 */
+            height: 80vh; /* 高度视口高度的80% */
+            margin: auto; /* 上下外边距20px，左右自动 */
+            margin-top: 20px;
+            margin-bottom: -20px;
+            overflow: hidden; /* 隐藏溢出的内容 */
+            position: relative; /* 相对定位 */
+        }
+        .image-container spline-viewer {
+            position: absolute;
+            top: -10%; left: -10%; /* 向上和向左移动图片10% */
+            width: 120%; height: 120%; /* 图片宽高设置为容器的120% */
+            object-fit: cover; /* 保持宽高比缩放图片 */
+        }
+        .button-28 {
+        position: absolute; /* 绝对定位 */
+        bottom: 20%; /* 距离容器底部10px */
+        left: 50%; /* 水平居中 */
+        transform: translateX(-50%); /* 确保按钮水平居中于容器 */
+        appearance: none;
+        background-color: rgba(0, 0, 0, 0.443);
+        border: 1px solid #FFFFFF;
+        border-radius: 10px;
+        box-sizing: border-box;
+        color: #FFFFFF;
+        cursor: pointer;
+        display: inline-block;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: 20px;
+        font-weight: 100;
+        letter-spacing: 5px ;
+        line-height: normal;
+        margin: 0;
+        min-height: 60px;
+        min-width: 0;
+        outline: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        transition: all 1.5s cubic-bezier(.23, 1, 0.32, 1);
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+        width: 6%;
+        will-change: transform;
+        box-shadow: 0 0 30px #ffffffb0;
+        }
+
+        .button-28:disabled {
+        pointer-events: none;
+        }
+
+        .button-28:hover {
+        color: #000;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 0px #FFFFFF;
+        }
+
+    </style>
+</head>
+<body>
+
+
+
+<a href="https://www.fusso.org">
+    <img src="logo.png" alt="Logo" class="logo">
+</a>
+
+<div class="image-container">
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.53/build/spline-viewer.js"></script>
+    <spline-viewer url="https://prod.spline.design/5UtR3t52Xn2GMFOK/scene.splinecode"></spline-viewer>
+</div>
+
+<div class="texts"></p>
+
+<button onclick="window.location.href='https://www.fusso.org/fucac-activity';" class="button-28" role="button">ENTER</button>
+
+</body>
+</html>
 
